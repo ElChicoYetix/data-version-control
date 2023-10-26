@@ -4,3 +4,8 @@ stages:
       -M metrics/accuracy.json python3 -m src.train'
     deps:
     - data/prepared/train.csv
+  prepared:
+    cmd: '" -d" src/prepare.py " -d" data/raw/train/ python3 -m src.prepare'
+    outs:
+    - data/prepared/test.csv:
+        cache: false
