@@ -7,5 +7,5 @@ stages:
   prepared:
     cmd: '" -d" src/prepare.py " -d" data/raw/train/ python3 -m src.prepare'
     outs:
-    - data/prepared/test.csv:
+    - data/prepared/train.csv:
         cache: false
