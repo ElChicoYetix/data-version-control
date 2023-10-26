@@ -1,0 +1,6 @@
+stages:
+  train:
+    cmd: '" -d" src/train.py " -d" src/prepare.py--outs-persist model/model.joblib
+      -M metrics/accuracy.json python3 -m src.train'
+    deps:
+    - data/prepared/train.csv
